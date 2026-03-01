@@ -1,0 +1,43 @@
+.root {
+    --bg1: #07051a;
+    --bg2: #071b8c;
+    --pink: #ff2d55;
+    --magenta: #ffdde6;
+    --violet: #6b39ff;
+    --white: #fff;
+    --muted: rgba(255, 255,255, 0.6);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: 
+        radial-gradient(circle at 15% 85%, rgba(255, 45, 85, 0.15) 0%, rgba(0, 0, 0, 0)),
+        linear-gradient(135deg, var(--bg2) 0%, 100%);
+    color:var(--white);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.navbar {
+    height: 50px;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    padding: 20px auto;
+    margin: 0;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.container .container-nav-flex {
+    width: 30px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
