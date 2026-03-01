@@ -115,18 +115,26 @@ body {
     background-color: rgb(100, 97, 97);
     padding: 0 40px;
     align-items: center;
-    justify-content: space-between;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
     box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
+}
+
+.container-nav-flex {
+    width: 100%;
+    display: flex;                 
+    justify-content: space-between; /* logo kiri, nav kanan */
+    align-items: center;
 }
 
 nav {
     display: flex;
     gap: 28px;
+    margin-left: auto;
 }
 
 nav a {
@@ -145,22 +153,15 @@ nav a:hover {
 .logo {
     font-size: 28px;
     font-weight: bold;
-    margin: auto;
 }
 
 .logo .accent {
     color: var(--pink);
 }
 
-.container .container-nav-flex {
-    width: 30px;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
 .container {
     padding-top: 120px;
+    padding: 20px auto;
     width: 100%;
     box-sizing: border-box;
 }
@@ -176,12 +177,28 @@ nav a:hover {
     font-size: 18px;
     letter-spacing: 2px;
     opacity: 0.8;
+    text-align: center;
+}
+
+.hero-image {
+    margin-top: 60px;
+    width: 100%;
+    height: 1000px;
+    align-items: center;
+    padding: 80px;
+    border: 1px solid black;;
+}
+
+.outer-container {
+    width: 100%;
+    padding-top: 100px;
+    align-items: center;
+    padding: 30px;
 }
 
 .card-container {
-    display: flex;
     align-items: center;
-    height: 300px;
+    height: 600px;
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
@@ -208,50 +225,94 @@ nav a:hover {
     min-width: 250px;
     height: 300px;
     width: 300px;
-    background-color: var(--bg1);
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
     padding: 10px;
-    background: rgba(255, 255,255, 0.6);
+    background: rgba(255, 23, 255, 0.05);
+    justify-content: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(90deg, var(--pink), var(--violet));
 }
 
 .biodata-container {
-    width: 100%;
-    height: 500px;
-    grid-template-columns: 1fr 1fr;
     margin-top: 100px;
-    padding: 10px auto;
-    background-color: rebeccapurple;
-    box-sizing: border-box;
+    padding: 100px;
+
+    background: linear-gradient(
+        135deg,
+        #3a003a,
+        #7b0055,
+        #ff2d55
+    );
+
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
 }
 
 h3 {
     font-size: 40px;
     font-weight: bold;
+    color: white
 }
 
 .title-bio {
     font-size: 28px;
     font-weight: bold;
+    color: white
+}
+
+.bio-content {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    border-radius: 16px;
+    background: red;
 }
 
 .image-profile {
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 100%;  
+    padding: 40px; 
 }
 
-.button-contact {
-    height: 20px;
-    width: 100px;
+.bio-content p {
+    padding: 40px;
+    font-size: 14px;
+    color:#fff;
+}
+
+.button-contact a {
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    background: linear-gradient(90deg, var(--pink), var(--magenta));
+    border-radius: 30px;
+    color: white;
     background-color: red;
     text-decoration: none;
-    line-height: normal;
-    padding: 20px auto;
+    margin-top: 50px;
+    transition: 0.3s ease-in;
+    text-align: center;
+    padding: 13px;
+}
+
+.button-contact a:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, var(--pink), var(--violet));
 }
 
 footer {
-    height: 150px;
+    height: 250px;
     width: 100%;
     align-items: center;
-    padding: 30px auto;
-    background-color: slategray;
+    padding: 80px;
+    text-align: center;
+    background: rgba(255,255,255,0.05);
 }
