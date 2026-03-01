@@ -1,0 +1,78 @@
+<!DOCTYPE html> <!-- Memberitahu browser bahwa ini HTML5 -->
+
+<html lang="id"> <!-- Root dokumen HTML, bahasa Indonesia -->
+
+<head> <!-- Bagian metadata website -->
+    <meta charset="UTF-8"> <!-- Encoding karakter agar simbol terbaca -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Agar responsive di HP -->
+    <title>RumahKu Design</title> <!-- Judul tab browser -->
+    
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="style.css"> <!-- Link ke file CSS -->
+</head>
+
+<body> <!-- Semua konten website -->
+
+    <!-- ================= NAVBAR ================= -->
+    <header id="navbar"> <!-- ID selector akan dipakai di CSS -->
+        
+        <div class="container nav-flex"> <!-- Container + Flexbox -->
+            
+            <h2 class="logo">RumahKu</h2> <!-- Logo website -->
+            
+            <nav> <!-- Tag navigasi -->
+                <a href="#">Home</a> <!-- Link navigasi -->
+                <a href="#produk">Produk</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+
+        </div>
+    </header>
+    <!-- =============== END NAVBAR =============== -->
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero container"> <!-- Class selector -->
+
+        <h1>Desain Rumah Modern & Minimalis</h1> <!-- Judul utama -->
+        <p>Pilih paket desain sesuai kebutuhan Anda</p> <!-- Deskripsi -->
+
+        <!-- Container Card Produk -->
+        <div id="produk" class="card-container"> <!-- ID + Class selector -->
+
+            <!-- Card 1 -->
+            <div class="card"> <!-- Class selector -->
+                <img src="https://via.placeholder.com/300x200" alt="Rumah Minimalis"> <!-- Gambar -->
+                <h3>Rumah Minimalis</h3>
+                <p>2 kamar, 1 lantai</p>
+                <p class="price">Rp 1.200.000</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Interior Modern">
+                <h3>Interior Modern</h3>
+                <p>Desain ruang elegan</p>
+                <p class="price">Rp 900.000</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Renovasi Rumah">
+                <h3>Renovasi Rumah</h3>
+                <p>Upgrade tampilan rumah lama</p>
+                <p class="price">Rp 1.500.000</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- =============== END HERO SECTION =============== -->
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="kontak"> <!-- ID selector -->
+        <p>© 2026 RumahKu Design | Email: info@rumahku.com</p> <!-- Informasi footer -->
+    </footer>
+    <!-- =============== END FOOTER =============== -->
+
+</body>
+</html>
