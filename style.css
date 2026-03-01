@@ -1,4 +1,4 @@
-/*CSS Reser*/
+/*CSS Reset*/
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -310,7 +310,7 @@ nav a:hover {
 
 .biodata-container {
     margin-top: 100px;
-    padding: 200px;
+    padding: 100px 200px;
 
     background: linear-gradient(
         135deg,
@@ -342,16 +342,15 @@ h3 {
     align-items: center;       /* Supaya teks dan foto sejajar di tengah secara vertikal */
     justify-content: center;   /* Supaya konten berada di tengah container */
     gap: 50px;                 /* Memberi jarak antara foto dan teks */
-    padding: 60px;
+    padding: 60px 150px;
     border-radius: 16px;
     background: rgba(106, 20, 133, 0.795);
 }
 
 .image-profile {
-    width: 350px;
+    width: 400px;
     height: 100%;  
     padding: 40px; 
-    object-fit: cover;         /* Agar foto tidak penyok */
 }
 
 .bio-content p {
