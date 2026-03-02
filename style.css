@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
  * Include this rule to trigger hasLayout and contain floats.
  */
 .cf {
-    *zoom: 1;
+    zoom: 1;
 }
 
 :root{
@@ -125,28 +125,25 @@ body {
     height: 80px;
     width: 100%;
     display: flex;
-    background-color: rgb(100, 97, 97);
-    padding: 0 40px;
+    padding: 0 80px;
     align-items: center;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(20px);
     box-sizing: border-box;
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: 1000;
 }
 
 .container-nav-flex {
     width: 100%;
     display: flex;                 
-    justify-content: space-between; /* logo kiri, nav kanan */
+    justify-content: space-between; 
     align-items: center;
 }
 
 nav {
     display: flex;
-    gap: 28px;
+    gap: 60px;
     margin-left: auto;
 }
 
@@ -155,12 +152,30 @@ nav a {
     text-decoration: none;
     font-weight: 500;
     opacity: 0.8;
-    transition: opacity 0.3s;
+    transition: 0.3s;
+    position: relative;
+    font-size: 15px;
+    letter-spacing: 0.5px;
 }
 
 nav a:hover {
     opacity: 1;
-    color: var(--pink);
+    color: #ff4d8d;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #ff4d8d;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .logo {
@@ -169,10 +184,12 @@ nav a:hover {
 }
 
 .logo .accent {
+    font-size: 28px;
     color: var(--pink);
 }
 
 .container {
+    min-height: 100vh;
     padding: 20px auto;
     width: 100%;
     box-sizing: border-box;
@@ -183,21 +200,27 @@ nav a:hover {
     justify-content: center;    /* Tengah horizontal */
     align-items: center;        /* Tengah vertikal */
     text-align: center;         /* Tengah teks */
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
 }
 
 .hero-container h1 {
     margin-top: 300px;
-    font-size: 60px;
-    letter-spacing: 2px;
+    font-size: 80px;
     opacity: 0.8;
     text-align: center;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #ff4d8d, #6c63ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-container h2 {
-    font-size: 40px;
-    letter-spacing: 2px;
+    font-size: 50px;
     opacity: 0.8;
     text-align: center;
+    letter-spacing: 2px;
 }
 
 .hero{
@@ -219,10 +242,10 @@ nav a:hover {
     inset:0;
     background: linear-gradient(
         120deg,
-        #ff2d55,
-        #6b3cff,
-        #1b6cff,
-        #ff4da6
+        #fd0331,
+        #6233ff,
+        #28fa5c,
+        #0a8b9c
     );
     background-size: 300% 300%;
     animation: gradientMove 8s ease infinite;
@@ -248,12 +271,22 @@ nav a:hover {
 }
 
 .outer-container {
-    margin-top: 100px;
+    position: relative;
     width: 100%;
     padding-top: 100px;
     align-items: center;
-    padding: 30px;
+    padding: 80px auto;
     text-align: center;
+    box-sizing: border-box;
+    background:
+        radial-gradient(circle at 50% 10%, rgba(130,60,255,0.35), transparent 60%),
+        linear-gradient(
+            to bottom,
+            #1e0b36 0%,
+            #12071f 50%,
+            #000000 100%
+        );
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
 }
 
 .outer-container h3 {
@@ -273,6 +306,7 @@ nav a:hover {
     margin: 10px;
     overflow-x: auto;
     scroll-behavior: smooth;    /* Scroll halus */
+    margin-bottom: 130px;
 }
 
 .card-container::-webkit-scrollbar {
@@ -295,12 +329,13 @@ nav a:hover {
     display: flex;
     align-items: center;
     backdrop-filter: blur(6px);
-    border-radius: 16px;
+    border-radius: 20px;
     padding: 10px;
-    background: rgba(255, 23, 255, 0.05);
+    background: rgba(243, 2, 243, 0.089);
     justify-content: center;
     font-weight: bold;
     transition: 0.3s;
+    border: 1px solid rgb(87, 1, 248);
 }
 
 .card:hover {
@@ -309,42 +344,48 @@ nav a:hover {
 }
 
 .biodata-container {
-    margin-top: 100px;
     padding: 100px 200px;
-
-    background: linear-gradient(
-        135deg,
-        #3a003a,
-        #7b0055,
-        #ff2d55
-    );
-
+    background:
+        radial-gradient(circle at 50% 10%, rgba(60, 242, 255, 0.35), transparent 60%),
+        linear-gradient(
+            to bottom,
+            #1e0b36 0%,
+            #12071f 50%,
+            #000000 100%
+        );
     box-shadow: 0 40px 80px rgba(0,0,0,0.6);
 }
 
-h3 {
+.biodata-container h3 {
+    margin-left: 60px;
     font-size: 60px;
     font-weight: bold;
     color: white;
-    margin-bottom: 20px;
 }
 
 .title-bio {
-    font-size: 32px;
+    margin-top: 20px;
+    margin-left: 60px;
+    font-size: 40px;
     font-weight: bold;
     color: white
 }
 
 .bio-content {
     margin-top: 60px;
-    display: grid; 
+    display: inline-grid;
     grid-template-columns: 1fr 1fr;            /* Membuat konten bersebelahan */
     align-items: center;       /* Supaya teks dan foto sejajar di tengah secara vertikal */
     justify-content: center;   /* Supaya konten berada di tengah container */
-    gap: 50px;                 /* Memberi jarak antara foto dan teks */
+    gap: 40px;                 /* Memberi jarak antara foto dan teks */
+    overflow: hidden;
     padding: 60px 150px;
-    border-radius: 16px;
-    background: rgba(106, 20, 133, 0.795);
+    border-radius: 40px;
+    background-image: url(Hero\ Image.jpg);
+    background-position: left 30%;
+    background-position: bottom 70%;
+    position: relative;
+    background-size: 240%;
 }
 
 .image-profile {
@@ -353,29 +394,50 @@ h3 {
     padding: 40px; 
 }
 
-.bio-content p {
+.bio-content .title-bio-word {
+    font-size: 36px;
+    text-align: justify;
+    line-height: 1.8;
+    padding: 0px 40px;
+    font-weight: bold;
+}
+
+.title-bio-word .accent {
+    color: var(--pink);
+}
+
+.bio-content .sub-title-bio-word {
+    font-size: 28px;
+    text-align: justify;
+    line-height: 1.8;
+    padding: 0px 40px;
+}
+
+.main-word-bio-content p {
     padding: 40px;
     font-size: 14px;
     color:#fff;
     text-align: justify;       /* Membuat teks rata kiri-kanan */
-    line-height: 1.8;
+    line-height: 2.8;
 }
 
 .button-contact a {
-    display: inline-block;
-    height: 50px;
-    width: 150px;
-    background: linear-gradient(90deg, var(--pink), var(--magenta));
-    border-radius: 30px;
-    color: white;
-    background: rgba(106, 20, 133, 0.795);
+    margin-left: 40px;
+    align-items: center;                  /* Vertical center text */
+    justify-content: center;              /* Horizontal center text */ 
+    padding: 14px 28px;                   /* Lebih clean daripada height */
+    background: linear-gradient(90deg, var(--pink), var(--magenta)); 
+    border-radius: 50px;                  /* Lebih smooth */
+    color: #fff;
+    font-weight: 600;                     /* Tebal sedikit */
+    font-size: 15px;
+    letter-spacing: 0.5px;                /* Biar lebih premium */
     text-decoration: none;
-    margin-top: 50px;
-    transition: 0.3s ease-in;
-    text-align: center;
-    padding: 13px;
-    border: 1px solid white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;            /* Lebih smooth */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .button-contact a:hover {
@@ -384,17 +446,18 @@ h3 {
 }
 
 footer {
-    height: 250px;
+    height: 350px;
     width: 100%;
     align-items: center;
     padding: 80px;
     text-align: center;
-    background: rgba(255,255,255,0.05);
+    background-color: rgba(18, 19, 19, 0.432);
 }
 
 footer h4 {
     font-size: 18px;
     color: white;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
